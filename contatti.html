@@ -31,10 +31,15 @@
 <section class="contact-layout">
   <div class="contact-form-col">
     <h2>Richiedi un preventivo</h2>
-    <form id="contact-form">
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="f7b10cd6-b28a-4b12-8dbb-00803e3a4eb9">
+      <input type="hidden" name="subject" value="Nuova richiesta dal sito CompasViaggi">
+      <input type="hidden" name="redirect" value="https://davcic.github.io/CompasViaggi/contatti.html?inviato=1">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
       <div>
-        <label for="nome-cognome">Nome e cognome</label>
-        <input type="text" id="nome-cognome" name="Nome e cognome" required>
+        <label for="nome-cognome">Nome e Cognome</label>
+        <input type="text" id="nome-cognome" name="Nome e Cognome" required>
       </div>
       <div class="form-row">
         <div>
