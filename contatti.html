@@ -24,64 +24,71 @@
   </nav>
 </header>
 
-<section class="page-hero">
+<section class="page-hero page-hero-compact">
   <h1>Contattaci</h1>
 </section>
 
-<section>
-  <h2>I nostri recapiti</h2>
-  <ul class="contact-info-list">
-    <li><strong>Indirizzo:</strong> C.so Sebastopoli 211, 10137 Torino</li>
-    <li><strong>Telefono:</strong> 011 351341</li>
-    <li><strong>Email:</strong> agenzia@compasviaggi.com</li>
-    <li><strong>Facebook:</strong> <a href="https://www.facebook.com/compasviaggi" target="_blank" rel="noopener">facebook.com/compasviaggi</a></li>
-    <li><strong>Orari:</strong> Lunedì - Venerdì 09:00-12:30 / 15:00-19:00, Sabato 09:00-12:30, Domenica chiuso</li>
-  </ul>
-</section>
+<section class="contact-layout">
+  <div class="contact-form-col">
+    <h2>Richiedi un preventivo</h2>
+    <form id="contact-form" action="https://formsubmit.co/agenzia@compasviaggi.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuova richiesta dal sito CompasViaggi">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://davcic.github.io/CompasViaggi/contatti.html">
 
-<section class="alt-bg">
-  <h2>Richiedi un preventivo</h2>
-  <p class="section-intro">Compila il modulo con i tuoi dati e i dettagli del viaggio che desideri: ti risponderemo al più presto.</p>
-  <form id="contact-form" action="https://formsubmit.co/agenzia@compasviaggi.com" method="POST">
-    <input type="hidden" name="_subject" value="Nuova richiesta dal sito CompasViaggi">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://davcic.github.io/CompasViaggi/contatti.html">
+      <div class="form-row">
+        <div>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="Nome" required>
+        </div>
+        <div>
+          <label for="cognome">Cognome</label>
+          <input type="text" id="cognome" name="Cognome" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="telefono">Telefono</label>
+          <input type="tel" id="telefono" name="Telefono" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+      </div>
+      <div>
+        <label for="destinazione">Dove vuoi andare?</label>
+        <input type="text" id="destinazione" name="Destinazione" placeholder="Es. Maldive, Giappone, crociera nel Mediterraneo...">
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="periodo">Periodo indicativo</label>
+          <input type="text" id="periodo" name="Periodo" placeholder="Es. Luglio 2026, due settimane">
+        </div>
+        <div>
+          <label for="persone">Numero di persone</label>
+          <input type="number" id="persone" name="Numero di persone" min="1">
+        </div>
+      </div>
+      <div>
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="Messaggio" placeholder="Raccontaci altri dettagli sul viaggio che desideri..."></textarea>
+      </div>
+      <button type="submit" class="btn">Invia richiesta</button>
+    </form>
+  </div>
 
-    <div>
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" name="Nome" required>
-    </div>
-    <div>
-      <label for="cognome">Cognome</label>
-      <input type="text" id="cognome" name="Cognome" required>
-    </div>
-    <div>
-      <label for="telefono">Telefono</label>
-      <input type="tel" id="telefono" name="Telefono" required>
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" required>
-    </div>
-    <div>
-      <label for="destinazione">Dove vuoi andare?</label>
-      <input type="text" id="destinazione" name="Destinazione" placeholder="Es. Maldive, Giappone, crociera nel Mediterraneo...">
-    </div>
-    <div>
-      <label for="periodo">Periodo indicativo</label>
-      <input type="text" id="periodo" name="Periodo" placeholder="Es. Luglio 2026, due settimane">
-    </div>
-    <div>
-      <label for="persone">Numero di persone</label>
-      <input type="number" id="persone" name="Numero di persone" min="1">
-    </div>
-    <div>
-      <label for="messaggio">Messaggio</label>
-      <textarea id="messaggio" name="Messaggio" placeholder="Raccontaci altri dettagli sul viaggio che desideri..."></textarea>
-    </div>
-    <button type="submit" class="btn">Invia richiesta</button>
-  </form>
+  <aside class="contact-info-col">
+    <h2>I nostri recapiti</h2>
+    <ul class="contact-info-list contact-info-list-left">
+      <li><strong>Indirizzo:</strong> C.so Sebastopoli 211, 10137 Torino</li>
+      <li><strong>Telefono:</strong> 011 351341</li>
+      <li><strong>Email:</strong> agenzia@compasviaggi.com</li>
+      <li><strong>Facebook:</strong> <a href="https://www.facebook.com/compasviaggi" target="_blank" rel="noopener">facebook.com/compasviaggi</a></li>
+      <li><strong>Orari:</strong> Lun-Ven 09:00-12:30 / 15:00-19:00<br>Sab 09:00-12:30, Dom chiuso</li>
+    </ul>
+  </aside>
 </section>
 
 <footer class="site-footer">
