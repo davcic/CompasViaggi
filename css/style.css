@@ -1,0 +1,288 @@
+:root {
+  --blu: #2E86C1;
+  --blu-scuro: #1B4F72;
+  --giallo: #F4D03F;
+  --bianco: #FFFFFF;
+  --grigio-chiaro: #F7F9FA;
+  --grigio-testo: #4A4A4A;
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--grigio-testo);
+  background: var(--bianco);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blu);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo-link img {
+  height: 55px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--blu-scuro);
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--blu-scuro);
+  font-weight: 600;
+}
+
+.main-nav a.active {
+  border-bottom: 3px solid var(--giallo);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--blu) 0%, var(--blu-scuro) 100%);
+  color: var(--bianco);
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  height: 6px;
+  background: var(--giallo);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 6px 6px 0 0;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 auto 24px;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--giallo);
+  color: var(--blu-scuro);
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.page-hero {
+  background: var(--blu-scuro);
+  color: var(--bianco);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  margin: 0;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
+section h2 {
+  color: var(--blu-scuro);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+  color: var(--grigio-testo);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--grigio-chiaro);
+  border-radius: var(--radius);
+  padding: 24px;
+  border-top: 4px solid var(--giallo);
+}
+
+.card h3 {
+  color: var(--blu-scuro);
+  margin-top: 0;
+}
+
+.alt-bg {
+  background: var(--grigio-chiaro);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--blu-scuro);
+  color: var(--bianco);
+  padding: 36px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto 20px;
+}
+
+.site-footer h4 {
+  color: var(--giallo);
+  margin-top: 0;
+}
+
+.site-footer a {
+  color: var(--bianco);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 16px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Form */
+form {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--blu-scuro);
+  margin-bottom: 4px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-status {
+  text-align: center;
+  font-weight: 600;
+  min-height: 24px;
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.contact-info-list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+  .main-nav.open {
+    display: block;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 0;
+  }
+  .site-header {
+    flex-wrap: wrap;
+  }
+}
