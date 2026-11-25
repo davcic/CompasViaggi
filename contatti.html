@@ -31,21 +31,10 @@
 <section class="contact-layout">
   <div class="contact-form-col">
     <h2>Richiedi un preventivo</h2>
-    <form id="contact-form" action="https://formsubmit.co/agenzia@compasviaggi.com" method="POST">
-      <input type="hidden" name="_subject" value="Nuova richiesta dal sito CompasViaggi">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://davcic.github.io/CompasViaggi/contatti.html">
-
-      <div class="form-row">
-        <div>
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="Nome" required>
-        </div>
-        <div>
-          <label for="cognome">Cognome</label>
-          <input type="text" id="cognome" name="Cognome" required>
-        </div>
+    <form id="contact-form">
+      <div>
+        <label for="nome-cognome">Nome e cognome</label>
+        <input type="text" id="nome-cognome" name="Nome e cognome" required>
       </div>
       <div class="form-row">
         <div>
@@ -76,6 +65,7 @@
         <textarea id="messaggio" name="Messaggio" placeholder="Raccontaci altri dettagli sul viaggio che desideri..."></textarea>
       </div>
       <button type="submit" class="btn">Invia richiesta</button>
+      <p class="form-status" id="form-status"></p>
     </form>
   </div>
 
