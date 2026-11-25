@@ -63,6 +63,8 @@ img {
   font-size: 28px;
   color: var(--blu-scuro);
   cursor: pointer;
+  padding: 8px 12px;
+  line-height: 1;
 }
 
 .main-nav ul {
