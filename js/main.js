@@ -8,15 +8,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var form = document.querySelector("#contact-form");
-  var status = document.querySelector("#form-status");
-
-  if (form && status) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      status.textContent = "Grazie! Il tuo messaggio è stato inviato. Ti risponderemo al più presto.";
-      status.style.color = "#2E86C1";
-      form.reset();
-    });
-  }
 });

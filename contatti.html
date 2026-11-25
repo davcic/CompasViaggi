@@ -39,23 +39,47 @@
 </section>
 
 <section class="alt-bg">
-  <h2>Scrivici</h2>
-  <p class="section-intro">Compila il modulo e ti risponderemo al più presto per aiutarti a organizzare il tuo viaggio.</p>
-  <form id="contact-form">
+  <h2>Richiedi un preventivo</h2>
+  <p class="section-intro">Compila il modulo con i tuoi dati e i dettagli del viaggio che desideri: ti risponderemo al più presto.</p>
+  <form id="contact-form" action="https://formsubmit.co/agenzia@compasviaggi.com" method="POST">
+    <input type="hidden" name="_subject" value="Nuova richiesta dal sito CompasViaggi">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://davcic.github.io/CompasViaggi/contatti.html">
+
     <div>
-      <label for="nome">Nome e cognome</label>
-      <input type="text" id="nome" name="nome" required>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="Nome" required>
+    </div>
+    <div>
+      <label for="cognome">Cognome</label>
+      <input type="text" id="cognome" name="Cognome" required>
+    </div>
+    <div>
+      <label for="telefono">Telefono</label>
+      <input type="tel" id="telefono" name="Telefono" required>
     </div>
     <div>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="Email" required>
+    </div>
+    <div>
+      <label for="destinazione">Dove vuoi andare?</label>
+      <input type="text" id="destinazione" name="Destinazione" placeholder="Es. Maldive, Giappone, crociera nel Mediterraneo...">
+    </div>
+    <div>
+      <label for="periodo">Periodo indicativo</label>
+      <input type="text" id="periodo" name="Periodo" placeholder="Es. Luglio 2026, due settimane">
+    </div>
+    <div>
+      <label for="persone">Numero di persone</label>
+      <input type="number" id="persone" name="Numero di persone" min="1">
     </div>
     <div>
       <label for="messaggio">Messaggio</label>
-      <textarea id="messaggio" name="messaggio" required placeholder="Raccontaci la tua idea di viaggio..."></textarea>
+      <textarea id="messaggio" name="Messaggio" placeholder="Raccontaci altri dettagli sul viaggio che desideri..."></textarea>
     </div>
-    <button type="submit" class="btn">Invia messaggio</button>
-    <p id="form-status" class="form-status"></p>
+    <button type="submit" class="btn">Invia richiesta</button>
   </form>
 </section>
 
